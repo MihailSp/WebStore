@@ -9,7 +9,7 @@ namespace WebStore.Controllers
         public HomeController(IConfiguration Configuration) { _Configuration = Configuration; }
         public IActionResult Index()
         {
-            return Content("Hello from controller");
+            return View();
         }
 
         public IActionResult ContentString(String Id = "-Id-")
