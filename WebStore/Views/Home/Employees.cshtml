@@ -291,7 +291,7 @@
 </head>
 <body onload="bootstrap();">
      <p>
-        <a href="~/home/index">Главная</a>
+        <a href="~/">На главную</a>
     </p>
     <h3>Сотрудники</h3>
     <table>
@@ -300,9 +300,8 @@
                 <th>ID</th>
                 <th>Фамилия</th>
                 <th>Имя</th>
-                <th>Отчество</th>
+                <th>Отчество</th>  
                 <th>Ф.И.О</th>
-                <th>Возраст, лет</th>
             </tr>
         </thead>
         <tbody>
@@ -312,15 +311,14 @@
                 <td>@employee.Id</td>
                 <td>@employee.LastName</td>
                 <td>@employee.FirstName</td>
-                <td>@employee.Patronymic</td>
-                <td>@employee.ShortName</td>
-                <td>@employee.Age</td>
+                <td>@employee.Patronymic</td>                
+                <td><a href="~/home/ContentString/@employee.Id">@employee.ShortName</a></td>                
             </tr> 
             }
         </tbody>
     </table>
-
-
+    <hr/>
+    <h3>Океан</h3> 
     <canvas id="holder"></canvas>    
 </body>
 </html>

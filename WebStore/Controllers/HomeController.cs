@@ -20,9 +20,10 @@ namespace WebStore.Controllers
             return View();
         }
 
-        public IActionResult ContentString(String Id = "-Id-")
+        public IActionResult ContentString(String Id)
         {
-            return Content($"content: {Id}");
+            ViewBag.Message = Id;
+            return View(__Employee);
         }
 
         public IActionResult ConfigStr()

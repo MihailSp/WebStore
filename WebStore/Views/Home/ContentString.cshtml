@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using WebStore.Models
+
+@model IEnumerable<WebStore.Models.Employee>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title> 
+    <title>Сотрудники</title> 
 <style>    
     body{
         position: absolute;
@@ -288,12 +292,34 @@
 </script>    
 </head>
 <body onload="bootstrap();">
-    <p>
-        <a href="~/home/employees">Список сотрудников</a>
+     <p>
+        <a href="~/home/employees">На всех сотрудников</a>
     </p>
-    <p>Привет из первого представления!</p>
-     <hr/>
-    <h3>Океан</h3>    
+        
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>                
+                <th>Возраст, лет</th>                
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>               
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Id</td>
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).LastName</td>
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).FirstName</td>
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Patronymic</td>                
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Age</td>                
+            </tr> 
+        </tbody>
+    </table>       
+    <hr/>
+
+    <h3>Океан</h3> 
     <canvas id="holder"></canvas>    
 </body>
 </html>

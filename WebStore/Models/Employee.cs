@@ -17,7 +17,7 @@ namespace WebStore.Models
             {
                 var result = new StringBuilder(LastName);
                 if(FirstName is {Length: >0} first_name)
-                    result.Append(".").Append(first_name[0]).Append(".");
+                    result.Append(" ").Append(first_name[0]).Append(".");
                 if (Patronymic is { Length: > 0 } patronymic)
                     result.Append(patronymic[0]).Append(".");
 
