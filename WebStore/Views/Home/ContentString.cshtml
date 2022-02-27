@@ -319,7 +319,10 @@
     </table>       
     <hr/>
 
-    <h3>Океан</h3> 
-    <canvas id="holder"></canvas>    
+    <p>
+        <img src="/QR/QRCode?str=@Model.First(x => x.Id.ToString() == ViewBag.Message).ShortName" width="250"/>
+    </p>
+    @*<h3>Океан</h3> 
+    <canvas id="holder"></canvas>  *@  
 </body>
 </html>
