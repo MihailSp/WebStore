@@ -16,8 +16,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.MapGet("/trow", () => 
-{ 
-    throw new ApplicationException("Пример ошибки в приложении")
+{
+    throw new ApplicationException("Пример ошибки в приложении");
 });
 
 app.MapGet("/greetings", () => app.Configuration["ServerGreetings"]);
