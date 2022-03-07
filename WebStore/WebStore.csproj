@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties\wwwroot\**" />
+    <Content Remove="Properties\wwwroot\**" />
+    <EmbeddedResource Remove="Properties\wwwroot\**" />
+    <None Remove="Properties\wwwroot\**" />
+    <_WebToolingArtifacts Remove="Properties\wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
@@ -191,6 +199,6 @@
     <PackageReference Include="QRCoder" Version="1.4.3" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
