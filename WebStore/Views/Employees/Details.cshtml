@@ -1,0 +1,35 @@
+﻿@model WebStore.Models.Employee
+
+@{
+    ViewData["Title"] = "О сотруднике";
+}
+
+<div class="container">
+     <h3>Карточка сотрудника</h3>
+    <table class="table">        
+        <tr>
+            <th>ID</th><td>@Model.Id</td>
+        </tr>
+        <tr>
+            <th>Имя</th><td>@Model.FirstName</td>  
+        </tr>
+        <tr>
+            <th>Отчество</th><td>@Model.Patronymic</td>
+        </tr>
+        <tr>
+            <th>Фамилия</th><td>@Model.LastName</td>
+         </tr>
+        <tr>
+            <th>Возраст</th><td>@Model.Age</td>                
+        </tr>              
+    </table>
+    <hr/>
+    <p>
+        <img src="/QR/QRCode?str=@Model.ShortName" width="250"/>
+    </p>
+
+    <hr/>
+    <p>
+        <a asp-controller="Employees" asp-action="Index">К списку сотрудников</a>
+    </p>
+ </div>

@@ -8,11 +8,191 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties\wwwroot\**" />
+    <Content Remove="Properties\wwwroot\**" />
+    <EmbeddedResource Remove="Properties\wwwroot\**" />
+    <None Remove="Properties\wwwroot\**" />
+    <_WebToolingArtifacts Remove="Properties\wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\animate.css" />
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\css\price-range.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\images\404\404.png" />
+    <None Include="wwwroot\images\blog\blog-one.jpg" />
+    <None Include="wwwroot\images\blog\blog-three.jpg" />
+    <None Include="wwwroot\images\blog\blog-two.jpg" />
+    <None Include="wwwroot\images\blog\man-four.jpg" />
+    <None Include="wwwroot\images\blog\man-one.jpg" />
+    <None Include="wwwroot\images\blog\man-three.jpg" />
+    <None Include="wwwroot\images\blog\man-two.jpg" />
+    <None Include="wwwroot\images\blog\socials.png" />
+    <None Include="wwwroot\images\cart\one.png" />
+    <None Include="wwwroot\images\cart\three.png" />
+    <None Include="wwwroot\images\cart\two.png" />
+    <None Include="wwwroot\images\home\bg_border.png" />
+    <None Include="wwwroot\images\home\gallery1.jpg" />
+    <None Include="wwwroot\images\home\gallery2.jpg" />
+    <None Include="wwwroot\images\home\gallery3.jpg" />
+    <None Include="wwwroot\images\home\gallery4.jpg" />
+    <None Include="wwwroot\images\home\girl1.jpg" />
+    <None Include="wwwroot\images\home\girl2.jpg" />
+    <None Include="wwwroot\images\home\girl3.jpg" />
+    <None Include="wwwroot\images\home\iframe1.png" />
+    <None Include="wwwroot\images\home\iframe2.png" />
+    <None Include="wwwroot\images\home\iframe3.png" />
+    <None Include="wwwroot\images\home\iframe4.png" />
+    <None Include="wwwroot\images\home\logo.png" />
+    <None Include="wwwroot\images\home\map.png" />
+    <None Include="wwwroot\images\home\new.png" />
+    <None Include="wwwroot\images\home\partner1.png" />
+    <None Include="wwwroot\images\home\partner2.png" />
+    <None Include="wwwroot\images\home\partner3.png" />
+    <None Include="wwwroot\images\home\partner4.png" />
+    <None Include="wwwroot\images\home\pricing.png" />
+    <None Include="wwwroot\images\home\product1.jpg" />
+    <None Include="wwwroot\images\home\product2.jpg" />
+    <None Include="wwwroot\images\home\product3.jpg" />
+    <None Include="wwwroot\images\home\product4.jpg" />
+    <None Include="wwwroot\images\home\product5.jpg" />
+    <None Include="wwwroot\images\home\product6.jpg" />
+    <None Include="wwwroot\images\home\recommend1.jpg" />
+    <None Include="wwwroot\images\home\recommend2.jpg" />
+    <None Include="wwwroot\images\home\recommend3.jpg" />
+    <None Include="wwwroot\images\home\sale.png" />
+    <None Include="wwwroot\images\home\searchicon.png" />
+    <None Include="wwwroot\images\home\shipping.jpg" />
+    <None Include="wwwroot\images\product-details\1.jpg" />
+    <None Include="wwwroot\images\product-details\new.jpg" />
+    <None Include="wwwroot\images\product-details\rating.png" />
+    <None Include="wwwroot\images\product-details\share.png" />
+    <None Include="wwwroot\images\product-details\similar1.jpg" />
+    <None Include="wwwroot\images\product-details\similar2.jpg" />
+    <None Include="wwwroot\images\product-details\similar3.jpg" />
+    <None Include="wwwroot\images\shop\advertisement.jpg" />
+    <None Include="wwwroot\images\shop\product1.jpg" />
+    <None Include="wwwroot\images\shop\product10.jpg" />
+    <None Include="wwwroot\images\shop\product11.jpg" />
+    <None Include="wwwroot\images\shop\product12.jpg" />
+    <None Include="wwwroot\images\shop\product2.jpg" />
+    <None Include="wwwroot\images\shop\product3.jpg" />
+    <None Include="wwwroot\images\shop\product4.jpg" />
+    <None Include="wwwroot\images\shop\product5.jpg" />
+    <None Include="wwwroot\images\shop\product6.jpg" />
+    <None Include="wwwroot\images\shop\product7.jpg" />
+    <None Include="wwwroot\images\shop\product8.jpg" />
+    <None Include="wwwroot\images\shop\product9.jpg" />
+    <None Include="wwwroot\js\contact.js" />
+    <None Include="wwwroot\js\gmaps.js" />
+    <None Include="wwwroot\js\html5shiv.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\price-range.js" />
+    <None Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css" />
+    <None Include="wwwroot\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\lib\bootstrap\css\bootstrap.css" />
+    <None Include="wwwroot\lib\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\lib\bootstrap\js\affix.js" />
+    <None Include="wwwroot\lib\bootstrap\js\affix.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\alert.js" />
+    <None Include="wwwroot\lib\bootstrap\js\alert.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\button.js" />
+    <None Include="wwwroot\lib\bootstrap\js\button.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\carousel.js" />
+    <None Include="wwwroot\lib\bootstrap\js\carousel.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\collapse.js" />
+    <None Include="wwwroot\lib\bootstrap\js\collapse.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dropdown.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dropdown.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\modal.js" />
+    <None Include="wwwroot\lib\bootstrap\js\modal.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\popover.js" />
+    <None Include="wwwroot\lib\bootstrap\js\popover.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\scrollspy.js" />
+    <None Include="wwwroot\lib\bootstrap\js\scrollspy.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\tab.js" />
+    <None Include="wwwroot\lib\bootstrap\js\tab.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\lib\bootstrap\js\tooltip.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\transition.js" />
+    <None Include="wwwroot\lib\bootstrap\js\transition.min.js" />
+    <None Include="wwwroot\lib\font-awesome\css\font-awesome.css" />
+    <None Include="wwwroot\lib\font-awesome\css\font-awesome.min.css" />
+    <None Include="wwwroot\lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\lib\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\lib\jquery\jquery.js" />
+    <None Include="wwwroot\lib\jquery\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\jquery.min.map" />
+    <None Include="wwwroot\lib\prettyPhoto\css\prettyPhoto.css" />
+    <None Include="wwwroot\lib\prettyPhoto\css\prettyPhoto.min.css" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <None Include="wwwroot\lib\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <None Include="wwwroot\lib\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <None Include="wwwroot\lib\prettyPhoto\js\jquery.prettyPhoto.min.js" />
+    <None Include="wwwroot\lib\scrollup\jquery.scrollUp.js" />
+    <None Include="wwwroot\lib\scrollup\jquery.scrollUp.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
