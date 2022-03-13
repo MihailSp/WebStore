@@ -7,28 +7,13 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>	 
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Properties\wwwroot\**" />
-    <Content Remove="Properties\wwwroot\**" />
-    <EmbeddedResource Remove="Properties\wwwroot\**" />
-    <None Remove="Properties\wwwroot\**" />
-    <_WebToolingArtifacts Remove="Properties\wwwroot\**" />
-  </ItemGroup>
+ 
 
   <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\animate.css" />
-    <None Include="wwwroot\css\main.css" />
-    <None Include="wwwroot\css\price-range.css" />
-    <None Include="wwwroot\css\responsive.css" />
-    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
-    <None Include="wwwroot\fonts\FontAwesome.otf" />
-    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
-    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
     <None Include="wwwroot\images\404\404.png" />
     <None Include="wwwroot\images\blog\blog-one.jpg" />
     <None Include="wwwroot\images\blog\blog-three.jpg" />
@@ -93,11 +78,6 @@
     <None Include="wwwroot\images\shop\product7.jpg" />
     <None Include="wwwroot\images\shop\product8.jpg" />
     <None Include="wwwroot\images\shop\product9.jpg" />
-    <None Include="wwwroot\js\contact.js" />
-    <None Include="wwwroot\js\gmaps.js" />
-    <None Include="wwwroot\js\html5shiv.js" />
-    <None Include="wwwroot\js\main.js" />
-    <None Include="wwwroot\js\price-range.js" />
     <None Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css" />
     <None Include="wwwroot\lib\bootstrap\css\bootstrap-theme.min.css" />
     <None Include="wwwroot\lib\bootstrap\css\bootstrap.css" />
