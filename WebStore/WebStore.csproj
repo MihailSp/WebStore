@@ -7,7 +7,15 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
 
-	
+
+	<ItemGroup>
+		<Compile Remove="Properties\wwwroot\**" />
+		<Content Remove="Properties\wwwroot\**" />
+		<EmbeddedResource Remove="Properties\wwwroot\**" />
+		<None Remove="Properties\wwwroot\**" />
+		<_WebToolingArtifacts Remove="Properties\wwwroot\**" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<Folder Include="ViewModels\" />
