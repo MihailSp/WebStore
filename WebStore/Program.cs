@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Builder;
+using WebStore.Infrastructure.Conventions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(opt =>
+{
+    opt.Conventions.Add(new TestConvention());
+});
 
 var app = builder.Build();
 
