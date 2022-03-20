@@ -2,9 +2,24 @@
 @{
     ViewData["Title"] = "О сотрудниках";
 }
+ <style type="text/css">         
+        .container-flex{
+            margin: 50px;
+            flex-direction: row;
+            display: flex;
+            
+            align-items: stretch;
+        }
+        .table{            
+            padding: 5px;
+            width: 40%;            
+            margin: 5px;             
+        }
+ </style> 
 
- <div class="container">
-        <h3>Сотрудники</h3>
+ <h3 class="container-flex">Сотрудники</h3>
+
+ <div class="container-flex">        
         <table class="table">
             <thead>
                 <tr>
@@ -18,25 +33,25 @@
             <tbody>
                 @foreach(var employee in Model)
                 {
-                    <tr>
+                  <tr>
                     <td>@employee.Id</td>
                     <td>@employee.LastName</td>
                     <td>@employee.FirstName</td>
                     <td>@employee.Patronymic</td>                
-                    <td><a asp-controller="Employees" asp-action="Details" asp-route-Id="@employee.Id">@employee.ShortName</a></td>                
-                </tr> 
+                    <td><a asp-controller="Employees" asp-action="Details" asp-route-Id="@employee.Id">@employee.ShortName</a></td> 
+                    <td><a asp-action="Edit" asp-route-Id="@employee.Id"> 
+                        <span class = "fa fa-edit"> </span> </a>
+                    </td>
+                 </tr> 
                 }
             </tbody>
         </table>
+        <partial name="Partial/_Sea"/>                
+</div>   
 
-        <hr/>
-        <p>
-            <a asp-controller="Home" asp-action="Index">На главную</a>
-        </p>
-</div>
+<p class="container-flex">
+    <a asp-controller="Home" asp-action="Index">На главную</a>
+</p> 
 
-<partial name="Partial/_Sea"/>     
 
- <body onload="boot();">
-        <canvas id="holder"></canvas>
- </body>
+
