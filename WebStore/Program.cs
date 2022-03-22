@@ -1,8 +1,18 @@
 using Microsoft.AspNetCore.Builder;
+using WebStore.Infrastructure.Conventions;
+using WebStore.Services;
+using WebStore.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+var services = builder.Services;
+
+services.AddControllersWithViews(opt =>
+{
+    opt.Conventions.Add(new TestConvention());
+});
+
+services.AddScoped<IEmployeesData, InMemoryEmployeesData>();
 
 var app = builder.Build();
 

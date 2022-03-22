@@ -1,13 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
+using WebStore.Services.Interfaces;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
     {       
         private readonly IConfiguration _Configuration;
+        private readonly ILogger<EmployeesController> _Logger;
+        private readonly IEmployeesData _EmployeesData;
 
-        public HomeController(IConfiguration Configuration) { _Configuration = Configuration; }
+        public HomeController(IConfiguration Configuration, IEmployeesData EmployeesData, ILogger<EmployeesController> Logger) 
+        { 
+            _Configuration = Configuration;
+            _Logger = Logger;
+            _EmployeesData = EmployeesData;
+        }
         public IActionResult Index()
         {
             return View();
@@ -15,25 +23,15 @@ namespace WebStore.Controllers
 
         public IActionResult ContentString(String Id)
         {
-             List<Employee> __Employee = new()
-             {
-                 new Employee { Id = 1, LastName = "Иванов", FirstName = "Иван", Patronymic = "Иванович", Age = 23 },
-                 new Employee { Id = 2, LastName = "Петров", FirstName = "Петр", Patronymic = "Петрович", Age = 27 },
-                 new Employee { Id = 3, LastName = "Сидоров", FirstName = "Сидор", Patronymic = "Сидорович", Age = 18 }
-             };
+            var employees = _EmployeesData.GetAll();
 
             ViewBag.Message = Id;
-            return View(__Employee);
+            return View(employees);
         }
 
         public IActionResult ConfigStr()
         {
             return Content($"content: {_Configuration["ServerGreetings"]}");
-        }
-
-        //public IActionResult Employees()
-        //{
-        //    return View(__Employee);
-        //}
+        }        
     }
 }

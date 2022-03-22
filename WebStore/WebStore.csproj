@@ -24,11 +24,6 @@
 		<_WebToolingArtifacts Remove="Properties\wwwroot\**" />
 	</ItemGroup>
 
-
-	<ItemGroup>
-		<Folder Include="ViewModels\" />
-	</ItemGroup>
-
 	<ItemGroup>
 		<None Include="wwwroot\css\animate.css" />
 		<None Include="wwwroot\css\main.css" />
@@ -190,6 +185,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
 		<PackageReference Include="QRCoder" Version="1.4.3" />
 	</ItemGroup>
 
