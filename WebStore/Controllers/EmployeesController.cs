@@ -37,8 +37,15 @@ namespace WebStore.Controllers
             return View();
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Create()
         {
+            return View("Edit", new EmployeesViewModel());
+        }
+
+        public IActionResult Edit(int? Id)
+        {
+            if (Id is not { } id) return View(new EmployeesViewModel());
+
             var employee = _EmployeesData.GetById(id);
             if (employee == null) return NotFound();
 
@@ -66,6 +73,12 @@ namespace WebStore.Controllers
                 Age = Model.Age,
             };  
             
+            if(Model.Id== 0)
+            {
+                var id = _EmployeesData.Add(employee);
+                return RedirectToAction("Index", new { id });
+            }
+
             _EmployeesData.Edit(employee);
 
             return RedirectToAction("Index");
@@ -73,7 +86,29 @@ namespace WebStore.Controllers
 
         public IActionResult Delete(int id)
         {
-            return View();
+            if (id <= 0) return BadRequest();
+
+            var employee = _EmployeesData.GetById(id);
+            if (employee == null) return NotFound();
+
+            var model = new EmployeesViewModel
+            {
+                Id = employee.Id,
+                LastName = employee.LastName,
+                FirstName = employee.FirstName,
+                ShortName = employee.ShortName,
+                Patronymic = employee.Patronymic,
+                Age = employee.Age,
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            if (!_EmployeesData.Delete(id)) return NotFound();
+
+            return RedirectToAction("Index");
         }
     }
 }

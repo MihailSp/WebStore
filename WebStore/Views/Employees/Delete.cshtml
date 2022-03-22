@@ -1,35 +1,63 @@
-﻿@model WebStore.Models.Employee
+﻿@model WebStore.ViewModels.EmployeesViewModel
 
 @{
-    ViewData["Title"] = "О сотруднике";
+    ViewData["Title"] = "Удаление сотрудника";
 }
 
 <div class="container">
-     <h3>Карточка сотрудника</h3>
-    <table class="table">        
-        <tr>
-            <th>ID</th><td>@Model.Id</td>
-        </tr>
-        <tr>
-            <th>Имя</th><td>@Model.FirstName</td>  
-        </tr>
-        <tr>
-            <th>Отчество</th><td>@Model.Patronymic</td>
-        </tr>
-        <tr>
-            <th>Фамилия</th><td>@Model.LastName</td>
-         </tr>
-        <tr>
-            <th>Возраст</th><td>@Model.Age</td>                
-        </tr>              
-    </table>
-    <hr/>
-    <p>
-        <img src="/QR/QRCode?str=@Model.ShortName" width="250"/>
-    </p>
+  <h1>Удаление!</h1>
 
-    <hr/>
-    <p>
-        <a asp-controller="Employees" asp-action="Index">К списку сотрудников</a>
-    </p>
- </div>
+    <h3>Вы действительно хотите удалить сотрудника?</h3>
+    <div>        
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+        
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+        
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+        
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+        
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+        
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+        
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Patronymic)
+            </dt>
+        
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Patronymic)
+            </dd>        
+                      
+        
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+        
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+        </dl>
+    
+        <form asp-action="DeleteConfirmed" asp-route-id=@Model.Id>
+            <input type="submit" value="Удалить" class="btn btn-danger" /> 
+            <hr />
+            <a asp-action="Index">К списку сотрудников</a>
+        </form>
+    </div>
+</div>
+
