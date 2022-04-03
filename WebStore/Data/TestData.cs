@@ -4,6 +4,7 @@ namespace WebStore.Data
 {
     public class TestData
     {
+        ///<summary>Сотрудники</summary>
         public static ICollection<Employee> Employees { get; } = new List<Employee>
         {
             new () { Id = 1, LastName = "Иванов", FirstName = "Иван", Patronymic = "Иванович", Age = 23 },
@@ -12,8 +13,8 @@ namespace WebStore.Data
         };
 
 
-
-         public static IEnumerable<Section> Sections { get; } = new[]
+        ///<summary>Секции</summary>
+        public static IEnumerable<Section> Sections { get; } = new[]
          {
             new Section { Id = 1, Name = "Спорт", Order = 0 },
             new Section { Id = 2, Name = "Nike", Order = 0, ParentId = 1 },
@@ -47,6 +48,7 @@ namespace WebStore.Data
             new Section { Id = 30, Name = "Обувь", Order = 9 },
         };
 
+        ///<summary>Бренды</summary>
         public static IEnumerable<Brand> Brands { get; } = new[]
         {            
             new Brand { Id = 1, Name = "Acne", Order = 0 },
