@@ -76,6 +76,7 @@ namespace WebStore.Controllers
                 Id = Model.Id,
                 FirstName = Model.FirstName,
                 LastName = Model.LastName,
+                Patronymic= Model.Patronymic,
                 Age = Model.Age,
             };  
             
