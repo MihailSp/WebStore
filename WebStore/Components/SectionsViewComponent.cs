@@ -23,6 +23,7 @@ public class SectionsViewComponent : ViewComponent
                 Name = s.Name,
                 Order = s.Order,
             }).ToList();
+
         foreach(var parent_section in parent_sections_views)
         {
             var childs = sections.Where(s => s.ParentId == parent_section.Id);
