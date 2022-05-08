@@ -63,9 +63,9 @@ namespace WebStore.Data
         ///<summary>Продукты</summary>
         public static IEnumerable<Product> Products { get; } = new[]
         {            
-            new Product { Id = 1,  Name = "Белое платье",   Price= 725,  ImageUrl="product1.jpg",  Order = 0,  SectionId=18,   BrandId=4},
+            new Product { Id = 1,  Name = "Черное платье",   Price= 725,  ImageUrl="product1.jpg",  Order = 0,  SectionId=18,   BrandId=4},
             new Product { Id = 2,  Name = "Розовое платье", Price= 825,  ImageUrl="product2.jpg",  Order = 1,  SectionId=19,   BrandId=1},
-            new Product { Id = 3,  Name = "Красное платье", Price= 625,  ImageUrl="product3.jpg",  Order = 2,  SectionId=20,   BrandId=1},
+            new Product { Id = 3,  Name = "Красное платье", Price= 625,  ImageUrl="product3.jpg",  Order = 2,  SectionId=20,   BrandId=2},
             new Product { Id = 4,  Name = "Джинсы",         Price= 1125, ImageUrl="product4.jpg",  Order = 3,  SectionId=7,   BrandId=3},
             new Product { Id = 5,  Name = "Легкая майка",   Price= 225,  ImageUrl="product5.jpg",  Order = 4,  SectionId=1,   BrandId=2},
             new Product { Id = 6,  Name = "Легкое голубое поло", Price= 925, ImageUrl="product6.jpg", Order = 5, SectionId=5, BrandId=2},
