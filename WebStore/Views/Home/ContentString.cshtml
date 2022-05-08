@@ -1,7 +1,7 @@
-﻿@using WebStore.Models
+﻿@using WebStore.Services.Interfaces;
+@using WebStore.Domain.Entities;
 
-@model IEnumerable<WebStore.Models.Employee>
-     
+@model ICollection<Employee>
 
     <table>
         <thead>
@@ -14,18 +14,29 @@
             </tr>
         </thead> 
         <tbody>
-            <tr>               
-                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Id</td>
+            <tr>      
+            @{
+                var employee = Model.FirstOrDefault(employee => employee.Id.ToString() == ViewBag.Message);
+            }
+                    <td>@employee.Id</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.Patronymic</td>                
+                    <td>@employee.Age</td>
+                    
+            
+                
+                @*<td>@Model.FirstOrDefault(x => x.Id.ToString() == ViewBag.Message).Id</td>
                 <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).LastName</td>
                 <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).FirstName</td>
                 <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Patronymic</td>                
-                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Age</td>                
+                <td>@Model.First(x => x.Id.ToString() == ViewBag.Message).Age*</td>*@                
             </tr> 
         </tbody>
     </table>       
     <hr/>
 
     <p>
-        <img src="/QR/QRCode?str=@Model.First(x => x.Id.ToString() == ViewBag.Message).ShortName" width="250"/>
+        <img src="/QR/QRCode?str=@employee.ShortName" width="250"/>
     </p>
 
