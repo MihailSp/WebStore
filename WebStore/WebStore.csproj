@@ -24,6 +24,12 @@
 		<_WebToolingArtifacts Remove="Properties\wwwroot\**" />
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <Content Remove="wwwroot\images\shop\product1.jpg" />
+	  <Content Remove="wwwroot\images\shop\product12.jpg" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<None Include="wwwroot\css\animate.css" />
 		<None Include="wwwroot\css\main.css" />
@@ -81,14 +87,10 @@
 		<None Include="wwwroot\images\product-details\similar2.jpg" />
 		<None Include="wwwroot\images\product-details\similar3.jpg" />
 		<None Include="wwwroot\images\shop\advertisement.jpg" />
-		<None Include="wwwroot\images\shop\product1.jpg">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
+		<None Include="wwwroot\images\shop\product1.jpg" />
 		<None Include="wwwroot\images\shop\product10.jpg" />
 		<None Include="wwwroot\images\shop\product11.jpg" />
-		<None Include="wwwroot\images\shop\product12.jpg">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
+		<None Include="wwwroot\images\shop\product12.jpg" />
 		<None Include="wwwroot\images\shop\product2.jpg" />
 		<None Include="wwwroot\images\shop\product3.jpg" />
 		<None Include="wwwroot\images\shop\product4.jpg" />
