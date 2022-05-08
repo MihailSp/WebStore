@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebStore.Services.Interfaces;
+using WebStore.ViewModels;
 
 namespace WebStore.Controllers
 {
@@ -15,8 +16,21 @@ namespace WebStore.Controllers
             _Logger = Logger;
             _EmployeesData = EmployeesData;
         }
-        public IActionResult Index()
+        public IActionResult Index([FromServices] IProductData ProductData)
         {
+            var products = ProductData.GetProducts()
+                .OrderBy(x => x.Order)
+                .Take(6)
+                .Select(x => new ProductViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Price = x.Price,
+                    ImageUrl = x.ImageUrl,
+                });
+
+            ViewBag.Products = products;
+
             return View();
         }
 
@@ -24,7 +38,7 @@ namespace WebStore.Controllers
         {
             var employees = _EmployeesData.GetAll();
 
-            ViewBag.Message = Id;
+            //ViewBag.Message = Id;
             return View(employees);
         }
 
