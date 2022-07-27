@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Builder;
 using WebStore.Infrastructure.Conventions;
 using WebStore.Services;
 using WebStore.Services.Interfaces;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
